@@ -53,6 +53,15 @@
             width: 100%;
             height: 100%;
         }
+
+        .image-container {
+            display: flex;
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -67,11 +76,12 @@
         </p>
         <p style="font-size: 13px;"><sup>1</sup> <a href="https://www.iitj.ac.in/" style="color: black">IIT Jodhpur</a></p>
         <p style="font-size: 17px; margin-top: 20px;"><b>
+            <a href="https://huggingface.co/spaces/rishz09/prml-project" style="color: black">Website</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="static/report.pdf" style="color: black">Report</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="https://github.com/rishz09/prml-course-project" style="color: black">GitHub Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="https://git-disl.github.io/GTDLBench/datasets/mnist_datasets/" style="color: black">Dataset</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            Slides&nbsp;&nbsp;|&nbsp;&nbsp;
-            Short Presentation</b>
+            <a href="static/slides.pdf" style="color: black">Slides</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://www.youtube.com/watch?v=PFfeS9J3eS8" style="color: black">Video Presentation</a></b>
         </p>
     </header>
 
@@ -79,22 +89,30 @@
         <section style="margin-top: 40px;">
             <h2>Abstract</h2>
             <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify; line-height: 1.5;">This report presents a methodical approach to enhancing classification accuracy on the MNIST
-                dataset, and using it to classify handwritten digits into one of the ten decimal digits. Leveraging
-                four distinct feature extractors (LDA, PCA, Edge Detection, and a Custom Feature Extractor) and
-                various classifiers, we systematically evaluated and refined models based on performance metrics and
-                computational efficiency. Through rigorous testing and validation, including data augmentation to
-                bolster training samples, we arrived at an optimized model: Custom feature extractor paired with a
-                Random Forest classifier and augmented data. This model achieved an impressive accuracy of 97.78%
-                and demonstrated robustness when applied to real images. Our findings underscore the importance
-                of thoughtful feature extraction, model selection, and data augmentation in improving classification
-                outcomes.</p>
+                dataset, and using it to classify handwritten digits into one of the ten decimal digits. Leveraging two
+                distinct feature extractors (Edge Detection and a Custom Feature Extractor), two dimensionality
+                reduction techniques (LDA and PCA), and various classifiers, we systematically evaluated and refined
+                models based on performance metrics and computational efficiency. Through rigorous testing and
+                validation, including data augmentation to bolster training samples, we arrived at an optimized
+                model: Custom feature extractor paired with a Random Forest classifier and augmented data. This
+                model achieved an impressive accuracy of 97.78% and demonstrated robustness when applied to real
+                images. Our findings underscore the importance of thoughtful feature extraction, model selection,
+                and data augmentation in improving classification outcomes.</p>
             <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify;"><b>Keywords:</b> MNIST, digit classification, feature extractor, data augmentation, predictions</p>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <h2>Dataset</h2>
+            <div class="image-container">
+                <img src="Images/train_set_distn.png" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+              </div>
         </section>
 
         <section style="padding-top: 18px;">
             <h2>Short Presentation</h2>
             <div class="video-container">
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/QdBZY2fkU-0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/PFfeS9J3eS8" frameborder="0" allowfullscreen></iframe>
               </div>
         </section>
 
@@ -112,14 +130,12 @@
                   var gmailComposeURL = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(emailId);
                   window.location.href = gmailComposeURL;
                 }
-                </script>
+            </script>
+        </section>
 
-            <!-- Add more contact information if needed -->
+        <section style="padding-top: 18px;">
+            <h2>Group No: 32</h2>
         </section>
     </main>
-
-    <!-- <footer>
-        <p>&copy; 2024 My GitHub Pages Website</p>
-    </footer> -->
 </body>
 </html>
