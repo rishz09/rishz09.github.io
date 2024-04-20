@@ -3,65 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Pages Website</title>
+    <title>Handwritten Digit Classification</title>
     <!-- Add any additional meta tags, CSS links, or other head content here -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
     <style>
         /* Add your custom CSS styles here */
+        
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 60px;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+            /* background-color: black; */
+            color: black;
             text-align: center;
+            padding-left: 100px;
+            padding-right: 100px;
         }
         main {
-            padding: 20px;
+            padding-left: 250px;
+            padding-right: 250px;
+            letter-spacing: 0.5px;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
+
+        body, h1, h2, h3, h4, h5, h6, main, footer {
+            font-family: 'Google Sans', 'Times New Roman', Times, serif; /* Fallback font in case the custom font fails to load */
+        }
+
+        h1 {
+            letter-spacing: 1;
+        }
+
+        p {
+            letter-spacing: 0.25;
+        }
+
+        .video-container {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My GitHub Pages Website</h1>
+        <h1 style="margin-bottom: 25px;">Handwritten Digit Classification Using Traditional<br>Machine Learning Techniques</h1>
+        <p style="font-size: larger;">
+            Rishabh Acharya<sup>1</sup>&emsp;&emsp;
+            Pujit Jha<sup>1</sup>&emsp;&emsp;
+            Ankit Kumar<sup>1</sup>&emsp;&emsp;
+            Ayush Pekamwar<sup>1</sup>&emsp;&emsp;
+            Raj Nandan Singh<sup>1</sup>
+        </p>
+        <p style="font-size: 13px;"><sup>1</sup> <a href="https://www.iitj.ac.in/" style="color: black">IIT Jodhpur</a></p>
+        <p style="font-size: 17px; margin-top: 20px;"><b>
+            Report&nbsp;&nbsp;|&nbsp;&nbsp;
+            GitHub Repo&nbsp;&nbsp;|&nbsp;&nbsp;
+            Dataset&nbsp;&nbsp;|&nbsp;&nbsp;
+            Slides&nbsp;&nbsp;|&nbsp;&nbsp;
+            Short Presentation</b>
+        </p>
     </header>
 
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>This is my GitHub Pages website hosted at rishz09.github.io.</p>
+        <section style="margin-top: 40px;">
+            <h2>Abstract</h2>
+            <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify;">This report presents a methodical approach to enhancing classification accuracy on the MNIST
+                dataset, and using it to classify handwritten digits into one of the ten decimal digits. Leveraging
+                four distinct feature extractors (LDA, PCA, Edge Detection, and a Custom Feature Extractor) and
+                various classifiers, we systematically evaluated and refined models based on performance metrics and
+                computational efficiency. Through rigorous testing and validation, including data augmentation to
+                bolster training samples, we arrived at an optimized model: Custom feature extractor paired with a
+                Random Forest classifier and augmented data. This model achieved an impressive accuracy of 97.78%
+                and demonstrated robustness when applied to real images. Our findings underscore the importance
+                of thoughtful feature extraction, model selection, and data augmentation in improving classification
+                outcomes.</p>
+            <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify;"><b>Keywords:</b> MNIST, digit classification, feature extractor, data augmentation, predictions</p>
         </section>
 
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/rishz09/project1">Project 1</a></li>
-                <li><a href="https://github.com/rishz09/project2">Project 2</a></li>
-                <!-- Add links to your GitHub projects here -->
-            </ul>
+        <section style="padding-top: 18px;">
+            <h2>Short Presentation</h2>
+            <div class="video-container">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/QdBZY2fkU-0" frameborder="0" allowfullscreen></iframe>
+              </div>
         </section>
 
-        <section>
-            <h2>Contact Me</h2>
-            <p>Email: your.email@example.com</p>
+        <section style="padding-top: 18px;">
+            <h2>Contact</h2>
+            <p>Rishabh Acharya: <a href= "#" onclick="composeEmail('b22cs090@iitj.ac.in')" style="color: black">b22cs090@iitj.ac.in</a></p>
+            <p>Pujit Jha: <a href= "#" onclick="composeEmail('b22cs091@iitj.ac.in')" style="color: black">b22cs091@iitj.ac.in</a></p>
+            <p>Ankit Kumar: <a href= "#" onclick="composeEmail('b22cs076@iitj.ac.in')" style="color: black">b22cs076@iitj.ac.in</a></p>
+            <p>Ayush Pekamwar: <a href= "#" onclick="composeEmail('b22ee084@iitj.ac.in')" style="color: black">b22ee084@iitj.ac.in</a></p>
+            <p>Raj Nandan Singh: <a href= "#" onclick="composeEmail('b22ee052@iitj.ac.in')" style="color: black">b22ee052@iitj.ac.in</a></p>
+            
+            
+            <script>
+                function composeEmail(emailId) {
+                  var gmailComposeURL = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(emailId);
+                  window.location.href = gmailComposeURL;
+                }
+                </script>
+
             <!-- Add more contact information if needed -->
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         <p>&copy; 2024 My GitHub Pages Website</p>
-    </footer>
+    </footer> -->
 </body>
 </html>
-
