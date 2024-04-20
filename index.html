@@ -56,11 +56,18 @@
 
         .image-container {
             display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .image-container img {
             width: 50%;
             height: auto;
+        }
+
+        .caption {
+            text-align: center;
         }
     </style>
 </head>
@@ -104,9 +111,15 @@
         <section style="margin-top: 40px;">
             <h2>Dataset</h2>
             <div class="image-container">
-                <img src="static/train_set_distn.png" alt="Image 1">
-                <img src="static/test_set_distn.png" alt="Image 2">
-              </div>
+                <div>
+                    <img src="static/train_set_distn.png" alt="Training Set Distribution">
+                    <div class="caption">Training Set Distribution</div>
+                </div>
+                <div>
+                    <img src="static/test_set_distn.png" alt="Test Set Distribution">
+                    <div class="caption">Test Set Distribution</div>
+                </div>
+            </div>
         </section>
 
         <section style="padding-top: 18px;">
