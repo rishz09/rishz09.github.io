@@ -64,10 +64,25 @@
         .image-container img {
             width: 85%;
             height: auto;
+            text-align: center;
         }
 
         .caption {
             text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 80%;
+            /* padding-top: 45%; */
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -79,11 +94,11 @@
             <a href="https://www.linkedin.com/in/pujit-jha-a10aa0258/" style="color: black">Pujit Jha</a><sup>1</sup>&emsp;&emsp;
             <a href="https://www.linkedin.com/in/ankit-kumar-097b72255/" style="color: black">Ankit Kumar</a><sup>1</sup>&emsp;&emsp;
             <a href="https://www.linkedin.com/in/ayush-pekamwar/" style="color: black">Ayush Pekamwar</a><sup>1</sup>&emsp;&emsp;
-            Raj Nandan Singh<sup>1</sup>
+            <a href="https://github.com/alphaatom" style="color: black">Raj Nandan Singh</a><sup>1</sup>
         </p>
         <p style="font-size: 13px;"><sup>1</sup> <a href="https://www.iitj.ac.in/" style="color: black">IIT Jodhpur</a></p>
         <p style="font-size: 17px; margin-top: 20px;"><b>
-            <a href="https://huggingface.co/spaces/rishz09/prml-project" style="color: black">Website</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://huggingface.co/spaces/rishz09/prml-project" style="color: black">Interface</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="static/report.pdf" style="color: black">Report</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="https://github.com/rishz09/prml-course-project" style="color: black">GitHub Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="https://git-disl.github.io/GTDLBench/datasets/mnist_datasets/" style="color: black">Dataset</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -94,38 +109,71 @@
 
     <main>
         <section style="margin-top: 40px;">
+            <div class="image-container">
+                <div>
+                    <img src="/Images/training_2numbers_eachlabel_resize.png" alt="MNIST Digits">
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
             <h2>Abstract</h2>
-            <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify; line-height: 1.5;">This report presents a methodical approach to enhancing classification accuracy on the MNIST
-                dataset, and using it to classify handwritten digits into one of the ten decimal digits. Leveraging two
-                distinct feature extractors (Edge Detection and a Custom Feature Extractor), two dimensionality
-                reduction techniques (LDA and PCA), and various classifiers, we systematically evaluated and refined
-                models based on performance metrics and computational efficiency. Through rigorous testing and
-                validation, including data augmentation to bolster training samples, we arrived at an optimized
-                model: Custom feature extractor paired with a Random Forest classifier and augmented data. This
-                model achieved an impressive accuracy of 97.78% and demonstrated robustness when applied to real
-                images. Our findings underscore the importance of thoughtful feature extraction, model selection,
-                and data augmentation in improving classification outcomes.</p>
+            <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify; line-height: 1.5;">
+                This report presents a methodical approach to enhancing classification accuracy on the MNIST
+                dataset, and using it to classify handwritten digits into one of the ten decimal digits. Our approach
+                incorporates a meticulous blend of feature extraction methods, dimensionality reduction techniques,
+                and diverse classifiers, all strategically combined to optimize performance metrics while ensuring
+                computational efficiency. In this project, we investigate the efficacy of two distinct feature extractors:
+                Edge Detection and a bespoke Custom Feature Extractor, coupled with two well-established
+                dimensionality reduction algorithms, namely Linear Discriminant Analysis (LDA) and Principal
+                Component Analysis (PCA). Through rigorous experimentation and evaluation, incorporating advanced
+                techniques like data augmentation to enrich training datasets, we systematically refine and
+                validate our models based on a robust set of performance metrics.. Our findings culminate in the
+                development of an optimized model that combines the strengths of the Custom Feature Extractor
+                with a Random Forest classifier, further enhanced by augmented data samples. This optimized
+                model achieved a stellar classification accuracy of 97.78%, demonstrating both the effectiveness of
+                our approach and its applicability to real-world image classification tasks. Our findings underscore
+                the critical role of thoughtful feature extraction, judicious model selection, and strategic data augmentation
+                in not only improving classification outcomes but also in enhancing the robustness and
+                generalizability of machine learning models across diverse datasets and real-world scenarios.
+            </p>
             <p style="letter-spacing: 0.3px; word-spacing: 1px; text-align: justify;"><b>Keywords:</b> MNIST, digit classification, feature extractor, data augmentation, predictions</p>
         </section>
 
         <section style="margin-top: 40px;">
             <h2>Dataset</h2>
-            <div class="image-container">
+            <div class="image-container", style="margin-bottom: 40px;">
                 <div>
-                    <img src="static/train_set_distn.png" alt="Training Set Distribution">
+                    <img src="/Images/train_set_distn.png" alt="Training Set Distribution">
                     <div class="caption"><b>Training Set Distribution</b></div>
                 </div>
                 <div>
-                    <img src="static/test_set_distn.png" alt="Test Set Distribution">
+                    <img src="/Images/test_set_distn.png" alt="Test Set Distribution">
                     <div class="caption"><b>Test Set Distribution</b></div>
                 </div>
+            </div>
+        </section>
+        
+        <section style="margin-top: 60px;">
+            <h2>Preprocessing on User Images</h2>
+            <div class="image-container", style="margin-bottom: 40px;">
+                <div>
+                    <img src="/Images/my_3_resized.png" alt="Image Preprocessing">
+                </div>
+            </div>
+        </section>
+        
+        <section style="margin-top: 60px;">
+            <h2>Interface (<a href="https://huggingface.co/spaces/rishz09/prml-project" style="color: black">website</a>)</h2>
+            <div class="video-container">
+                <video src="/Images/hf_vid_edited.mp4" controls autoplay loop></video>
             </div>
         </section>
 
         <section style="padding-top: 18px;">
             <h2>Spotlight Presentation</h2>
             <div class="video-container">
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/PFfeS9J3eS8" frameborder="0" allowfullscreen></iframe>
+                <iframe width="800px" height="450px" src="https://www.youtube.com/embed/PFfeS9J3eS8" frameborder="0" allowfullscreen></iframe>
               </div>
         </section>
 
@@ -147,7 +195,7 @@
         </section>
 
         <section style="padding-top: 18px;">
-            <h2>Group No: 32</h2>
+            <h2>Group 32</h2>
         </section>
     </main>
 </body>
